@@ -1,0 +1,13 @@
+<section class="search">
+    <input [(ngModel)]="searchGift" type="text">
+    <button (click)="getGift()" > Search Gift </button>
+</section>
+
+<section class="gift">
+  <ul>
+    <li *ngFor="let gift of this.listGifts; let i = index" >
+      <img src="{{gift.images.original.url}}" alt="this slowpoke moves"  />
+      <span>{{gift.title}}</span>
+    </li>
+  </ul>
+</section>
